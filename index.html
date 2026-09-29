@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>FantasyBrain · League intelligence for fantasy managers</title>
+    <meta
+      name="description"
+      content="FantasyBrain is an analyst for your own fantasy league. It reads your league's rosters, matchups and free agents, then briefs you: lineup calls, win probability, waiver and trade ideas. You make every decision."
+    />
+    <meta property="og:title" content="FantasyBrain · Your league is the model" />
+    <meta property="og:description" content="League intelligence for fantasy football, baseball, hockey and basketball managers." />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="assets/war-room.jpg" />
+    <meta name="theme-color" content="#05070c" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400..600;1,9..144,400..600&family=Inter+Tight:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="wrap">
+        <a class="brand" href="./" aria-label="FantasyBrain home">
+          <img src="favicon.svg" width="28" height="28" alt="" />
+          <span>Fantasy<em>Brain</em></span>
+        </a>
+        <nav class="nav-links" aria-label="Sections">
+          <a class="optional" href="#what">What it does</a>
+          <a class="optional" href="#sports">Sports</a>
+          <a href="#data">Your data</a>
+          <a href="privacy.html">Privacy</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main">
+      <section class="hero">
+        <div class="wrap">
+          <span class="pill"><span class="dot"></span>In development · private beta</span>
+          <h1 style="margin-top: 28px">
+            Your league<br />
+            <span class="accent">is</span> the model.
+          </h1>
+          <p class="lede" style="margin-top: 28px">
+            Rankings are written for an average league, and nobody plays in one. FantasyBrain reads <em>your</em> league: every roster, matchup, free
+            agent and transaction. Then it briefs you like a staff analyst: the situation, your options, how confident it is, and why now. You make the
+            call.
+          </p>
+          <div class="actions">
+            <a class="btn btn-primary" href="#what">See what it does</a>
+            <a class="btn" href="#data">How we use league data</a>
+          </div>
+          <figure class="shot" style="margin-left: 0; margin-right: 0">
+            <picture>
+              <source srcset="assets/war-room.webp" type="image/webp" />
+              <img
+                src="assets/war-room.jpg"
+                width="1600"
+                height="1000"
+                alt="The FantasyBrain command center for a sample hockey league: a recommended roster move, a 54% win probability for this matchup, playoff odds and open injury cases."
+                loading="eager"
+              />
+            </picture>
+          </figure>
+          <p class="caption">The command center, shown on a synthetic sample league with fictional players.</p>
+        </div>
+      </section>
+
+      <section id="what" class="band">
+        <div class="wrap">
+          <div class="eyebrow">What it does</div>
+          <h2 style="margin-top: 14px">An analyst who has already read your whole league.</h2>
+          <div class="grid grid-3">
+            <div class="card">
+              <div class="num">01</div>
+              <h3>Lineup optimizer</h3>
+              <p>Solves your starting lineup exactly, flex and utility slots included, using injury-adjusted projections and lineup locks.</p>
+            </div>
+            <div class="card">
+              <div class="num">02</div>
+              <h3>Matchup odds</h3>
+              <p>Win probability for this week's matchup from points banked and the variance still to play, with the posture that fits.</p>
+            </div>
+            <div class="card">
+              <div class="num">03</div>
+              <h3>Opportunity scanner</h3>
+              <p>Every free agent against every droppable player, with the case for acting now, and "no move" when nothing clears the bar.</p>
+            </div>
+            <div class="card">
+              <div class="num">04</div>
+              <h3>League pressure</h3>
+              <p>Position supply and demand across every roster, playoff odds from thousands of simulated seasons, and who is likely to bid against you.</p>
+            </div>
+            <div class="card">
+              <div class="num">05</div>
+              <h3>Trade finder</h3>
+              <p>One-for-one ideas where both lineups improve, with a warning when a deal would arm a likely playoff rival.</p>
+            </div>
+            <div class="card">
+              <div class="num">06</div>
+              <h3>Ask the Brain</h3>
+              <p>A chat assistant grounded in your league's current state. It separates facts from assessments and says how sure it is.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="sports">
+        <div class="wrap">
+          <div class="eyebrow">Sports</div>
+          <h2 style="margin-top: 14px">One Brain, four sports.</h2>
+          <p class="lede" style="margin-top: 16px">
+            Each sport has its own playbook: positions and flex rules, when lineups lock, and what wins a matchup. Points leagues are supported today.
+          </p>
+          <div class="grid grid-4">
+            <div class="card sport" style="color: var(--signal)">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4.5 19.5c-1.6-5.4 1.2-11.7 6.4-14.2 2.7-1.3 5.9-1.4 8.6-.3 1.1 2.7 1 5.9-.3 8.6-2.5 5.2-8.8 8-14.2 6.4Z" />
+                <path d="m9 15 6-6M10.5 10.5l1.5 1.5M12.5 8.5l1.5 1.5M8.5 12.5l1.5 1.5" />
+              </svg>
+              <h3 style="color: var(--paper)">Football</h3>
+              <span class="status">Beta</span>
+              <p>Kickoff windows, the weekly waiver run, and FLEX solved exactly.</p>
+            </div>
+            <div class="card sport" style="color: var(--clay)">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="8.5" />
+                <path d="M6.2 5.8c2 1.7 3.1 3.8 3.1 6.2s-1.1 4.5-3.1 6.2M17.8 5.8c-2 1.7-3.1 3.8-3.1 6.2s1.1 4.5 3.1 6.2" />
+              </svg>
+              <h3 style="color: var(--paper)">Baseball</h3>
+              <span class="status">Preview</span>
+              <p>Games played, two-start pitchers, and daily lineup locks.</p>
+            </div>
+            <div class="card sport" style="color: var(--ice)">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M5 3.5 11.5 16c.4.8 1.2 1.2 2 1.2H19" />
+                <ellipse cx="17" cy="19.5" rx="3.5" ry="1.3" />
+              </svg>
+              <h3 style="color: var(--paper)">Hockey</h3>
+              <span class="status">Preview</span>
+              <p>Four-game weeks, confirmed goalies, multi-position forwards.</p>
+            </div>
+            <div class="card sport" style="color: var(--hardwood)">
+              <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="8.5" />
+                <path d="M3.5 12h17M12 3.5v17M6 6c1.8 1.6 2.8 3.7 2.8 6S7.8 16.4 6 18M18 6c-1.8 1.6-2.8 3.7-2.8 6s1 4.4 2.8 6" />
+              </svg>
+              <h3 style="color: var(--paper)">Basketball</h3>
+              <span class="status">Preview</span>
+              <p>Minutes, rest days, and games per week.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="wrap split">
+          <div>
+            <div class="eyebrow">How it works</div>
+            <h2 style="margin-top: 14px">You stay in command.</h2>
+            <p class="lede" style="margin-top: 16px">FantasyBrain advises. It never sets your lineup, makes a move, or messages your league.</p>
+          </div>
+          <ul class="checks">
+            <li><span><strong>Connect your league.</strong> Import a league you play in. Connections are read-only.</span></li>
+            <li><span><strong>Get the brief.</strong> Situation, options, a preferred call with a confidence level (Strong, Moderate or Lean), and why now.</span></li>
+            <li><span><strong>Decide.</strong> Accept, override or defer. Your decision journal scores lineup calls against what actually happened.</span></li>
+            <li><span><strong>Hold when it's right.</strong> "No action" is a real recommendation. Waiver priority and roster spots are worth protecting.</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section id="data">
+        <div class="wrap split">
+          <div>
+            <div class="eyebrow">Your data</div>
+            <h2 style="margin-top: 14px">Read-only, yours, never sold.</h2>
+            <p class="lede" style="margin-top: 16px">
+              FantasyBrain uses fantasy data only to advise the manager who connected it. Full details are in the <a href="privacy.html">privacy policy</a>.
+            </p>
+          </div>
+          <ul class="checks">
+            <li>
+              <span><strong>Read-only access.</strong> We request read access to your fantasy leagues and nothing else. We can't change lineups, make transactions or post in your league.</span>
+            </li>
+            <li><span><strong>Only leagues you import.</strong> League data is fetched for leagues you choose, when you open them or ask for a refresh.</span></li>
+            <li><span><strong>Private to you.</strong> A league's analysis is shown only to the manager who imported it. Manager names and platform user IDs aren't stored.</span></li>
+            <li><span><strong>Never sold, never ads.</strong> League data isn't sold, shared with advertisers, or used to build ad profiles.</span></li>
+            <li><span><strong>Encrypted and deletable.</strong> Access tokens are encrypted at rest. Disconnect anytime, export your data, or delete your account and everything in it.</span></li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="band">
+        <div class="wrap">
+          <div class="eyebrow">Pricing principles</div>
+          <h2 style="margin-top: 14px">Pay for the season. Not for the tricks.</h2>
+          <div class="grid grid-3">
+            <div class="card">
+              <h3>Same Brain in every plan</h3>
+              <p>Plans differ in how many leagues and questions you get, never in the quality of the advice.</p>
+            </div>
+            <div class="card">
+              <h3>One-time passes</h3>
+              <p>A pass covers a season. There's no subscription that silently renews.</p>
+            </div>
+            <div class="card">
+              <h3>Renew on evidence</h3>
+              <p>Your decision journal shows what the calls were worth, so renewing is a decision you make with data.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <span>© 2026 FantasyBrain · Not affiliated with or endorsed by any fantasy sports platform.</span>
+        <nav aria-label="Footer">
+          <a href="privacy.html">Privacy</a>
+          <a href="https://github.com/fantasybrainproject">Contact</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>
