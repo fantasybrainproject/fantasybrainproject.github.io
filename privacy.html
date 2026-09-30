@@ -46,8 +46,8 @@
             transactions and player statistics, as provided by the fantasy platform.
           </li>
           <li>
-            <strong>Platform access tokens:</strong> when you connect a fantasy platform account, the read-only access tokens it issues. We store them encrypted
-            and use them only to refresh leagues you've imported.
+            <strong>Platform credentials:</strong> when you connect a fantasy platform account, the read-only access tokens it issues (Yahoo) or the sign-in
+            cookies you paste (ESPN, which has no app sign-in). We store them encrypted and use them only to read leagues you've imported.
           </li>
           <li><strong>Your decisions:</strong> the recommendations you accept, override or defer in your decision journal, and any reasons you write down.</li>
           <li><strong>Usage counts:</strong> how many questions you've asked the assistant each day, to apply plan limits.</li>
@@ -82,8 +82,10 @@
 
         <h2>Fantasy platforms</h2>
         <p>
-          Connections to fantasy platforms are read-only. FantasyBrain cannot change your lineup, make transactions, or post in your league. You can disconnect a
-          platform at any time from the Leagues page; we then delete its access tokens, and imported leagues stop refreshing. FantasyBrain isn't affiliated with
+          FantasyBrain only reads from fantasy platforms. It never changes your lineup, makes transactions, or posts in your league. Yahoo access is read-only by
+          design. ESPN has no read-only option: the cookies you provide work like your ESPN sign-in, so we use them only to read the leagues you import, send them
+          nowhere but ESPN's fantasy service, and delete them when you disconnect. You can disconnect a platform at any time from the Leagues page; imported
+          leagues then stop refreshing. FantasyBrain isn't affiliated with
           or endorsed by any fantasy platform.
         </p>
 
